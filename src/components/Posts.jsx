@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
+import {deletePost} from '../actions/postActions';
 
 
 
@@ -43,7 +44,7 @@ const mapStateToProps = (state,ownProps) => {
 //interact with store
 const mapDispatchToProps = (dispatch) =>{
   return {
-    deletePost:(id) => { dispatch({type:'DELETE_POST',id:id}) } // dispatch action whenever we call this function 
+    deletePost:(id) => { dispatch(deletePost(id)) } // dispatch action whenever we call this function 
   }
 
 }
